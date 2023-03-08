@@ -27,7 +27,7 @@ const Form = () => {
 
   return (
     <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{display:'flex',flexDirection:'column',alignItems:'center', justifyContent:'space-around'}}>
             <label>Nombre completo</label>
             <input type="text" value={user.nombre} onChange={(e) => setUser({...user, nombre: e.target.value})} />
             <label>Obra social</label>
@@ -44,7 +44,7 @@ const Form = () => {
             <button>Enviar</button>
         </form>
         {err && 'No ha colocado la información correcta'}
-        {show ? <Card nombre={user.nombre} medico={user.medico}/> : null} //de cualquier forma funciona
+        {show ? <Card nombre={user.nombre} medico={user.medico}/> : null} 
     </div>
   )
 }
